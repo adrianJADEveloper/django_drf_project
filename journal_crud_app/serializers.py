@@ -9,6 +9,8 @@ class JournalSerializer(serializers.ModelSerializer):
         model = Journal
         fields = "__all__"
 
+        # ADDED THIS COMMENT
+
     # extra_kwargs = {
     #     'price': {'min_value': 2},
     #     'inventory': {'min_value': 0}
