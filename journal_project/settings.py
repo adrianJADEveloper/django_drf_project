@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'journal_crud_app',  # journal_CRUD_app
-    'djangorestframework',  # DRF
+    'rest_framework',  # DRF
 ]
 
 MIDDLEWARE = [
@@ -124,3 +124,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSE': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderes.BrowsableAPIRenderer',
+        'rest_framework_xml.renderers.XMLRenderer',
+    ]
+}
