@@ -1,0 +1,22 @@
+{% for item in entries %}
+
+<h1>{{ item.title }}</h1>
+
+<ul>
+  <li><h2>{{ item.author }}</h2></li>
+  <li><h3>{{ item.date_created }}</h3></li>
+  <li>
+    <h3>What are you greatful for?</h3>
+    {{ item.q_one }}
+  </li>
+  <li>
+    <h3>What's your action plan toward your goal?</h3>
+    {{ item.q_two }}
+  </li>
+  <li>
+    <h3>What's plan for tomorrow to achieve your goal?</h3>
+    {{ item.q_three }}
+  </li>
+</ul>
+
+{% endfor %}

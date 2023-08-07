@@ -15,3 +15,25 @@ class JournalListView(generics.ListCreateAPIView):
 class SingleJournalView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Journal.objects.all()
     serializer_class = JournalSerializer
+
+
+def journal_entries(request):
+
+    entries = Journal.objects.all()
+
+    context = {
+        'entries': entries,
+    }
+
+    return render(request, 'home.html', context)
+
+
+def single_journal(request, pk=id):
+
+    entries = Journal.objects.all()
+
+    context = {
+        'entries': entries,
+    }
+
+    return render(request, 'home.html', context)
